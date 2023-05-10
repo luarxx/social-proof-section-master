@@ -1,0 +1,265 @@
+@import url(https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+
+  /* Primary */
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "League Spartan", sans-serif !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 48% 40%;
+    grid-template-areas:
+      "header rate"
+      "card card";
+  }
+
+  .header {
+    grid-area: header;
+    padding: 5rem 3rem;
+  }
+
+  .cabecalho {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .cabecalho > h1 {
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    text-align: start;
+    padding: 0 10rem;
+  }
+
+  .cabecalho > p {
+    color: var(--Dark-Grayish-Magenta);
+    text-align: start;
+    margin-left: 10rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+  }
+
+  .rate {
+    grid-area: rate;
+    padding: 8rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rate > .rate-rating {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding-block: 0.5rem;
+    padding-inline: 3rem;
+    background-color: var(--Light-Grayish-Magenta);
+  }
+
+  .rate-rating > h3 {
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    padding-right: 1rem;
+  }
+
+  .rating1 {
+    margin-right: 20px;
+  }
+
+  .rating2 {
+    margin-left: 40px;
+  }
+
+  .rating3 {
+    margin-left: 80px;
+  }
+
+
+  .card {
+    grid-area: card;
+    padding: 1rem 10rem 0rem 15rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .cards {
+    background-color: var(--Very-Dark-Magenta);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card-title > img {
+    width: 15%;
+    border-radius: 50px;
+  }
+
+  .card-title > .card-title-text {
+    color: var(--White);
+    font-weight: 700;
+  }
+
+  .card-title-text > p {
+    color: var(--Soft-Pink);
+    padding-top: 0.2rem;
+    font-weight: 500;
+  }
+
+  .card-text {
+    color: var(--White);
+    font-weight: 500;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 18% 24% 50%;
+    grid-template-areas:
+      "header"
+      "rate"
+      "card";
+  }
+
+  .header {
+    grid-area: header;
+    padding: 5rem 1rem;
+  }
+
+  .cabecalho {
+    display: block;
+    padding: 0;
+  }
+
+  .cabecalho > h1 {
+    color: var(--Very-Dark-Magenta);
+    text-align: center;
+    padding: 0 3rem;
+  }
+
+  .cabecalho > p {
+    color: var(--Dark-Grayish-Magenta);
+    text-align: center;
+    padding-top: 1rem;
+    margin-inline: 24px;
+    font-weight: 500;
+    line-height: 1.2rem;
+  }
+
+  .rate {
+    grid-area: rate;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rating2 {
+    margin-left: 0px;
+  }
+
+  .rating3 {
+    margin-left: 0px;
+  }
+
+  .rate > .rate-rating {
+    background-color: var(--Light-Grayish-Magenta);
+    width: 100%;
+    display: block;
+    padding-block: 0;
+    padding-inline: 0;
+  }
+
+  .rate > .rate-rating > .rating-item {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .rating-item > img {
+    padding-inline: 4px;
+  }
+
+  .rate-rating > h3 {
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    padding-bottom: 1rem;
+  }
+
+  .card {
+    grid-area: card;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cards {
+    background-color: var(--Very-Dark-Magenta);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card-title > .card-title-text {
+    color: var(--White);
+    font-weight: 700;
+  }
+
+  .card-title > .card-title-text > p {
+    color: var(--Soft-Pink);
+    font-weight: 400;
+  }
+
+  .card-title > img {
+    width: 15%;
+    border-radius: 50px;
+  }
+
+  .card-text {
+    color: var(--White);
+    font-weight: 400;
+    padding-top: 1rem;
+    margin-inline: 5px;
+    line-height: 1.2rem;
+  }
+}
